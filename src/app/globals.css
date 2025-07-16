@@ -72,9 +72,7 @@ body {
 .tvcom-player-large {
   width: 90vw;
   max-width: 1200px;
-  height: 60vh;
-  min-height: 320px;
-  max-height: 70vh;
+  height: 90vh;
   background: #13294B;
   border-radius: 2rem;
   box-shadow: 0 4px 32px #0006;
@@ -83,4 +81,59 @@ body {
   justify-content: center;
   position: relative;
   margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+/* Video player specific styles */
+.tvcom-player-large iframe {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+}
+
+.tvcom-player-large .loading-overlay {
+  backdrop-filter: blur(4px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tvcom-player-large {
+    width: 95vw;
+    height: 60vh;
+  }
+  
+  .tvcom-title {
+    font-size: 2.5rem;
+  }
+  
+  .tvcom-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .tvcom-channel {
+    font-size: 1rem;
+  }
+}
+
+/* Fullscreen mode adjustments */
+@media (max-height: 600px) {
+  .tvcom-player-large {
+    height: 80vh;
+  }
+  
+  .tvcom-title {
+    font-size: 2rem;
+    margin-bottom: 0.1em;
+  }
+  
+  .tvcom-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 0.05em;
+  }
+  
+  .tvcom-channel {
+    font-size: 0.9rem;
+    margin-bottom: 1em;
+  }
 }
